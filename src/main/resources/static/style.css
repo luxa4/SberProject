@@ -1,0 +1,67 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto';
+    font-size: 24px;
+    height: 100vh;
+    width: 100%;
+    background: rgba(55, 55, 55, 1);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.text {
+    font-size: 150px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0px;
+    height: 0px;
+    color: #fff;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow:
+                0 0 4px #fff,
+                0 0 11px #fff,
+                0 0 19px #fff,
+                0 0 40px #1ec9c9,
+                0 0 80px #1ec9c9,
+                0 0 90px #1ec9c9,
+                0 0 100px #1ec9c9,
+                0 0 150px #1ec9c9;
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+
+
+.a1 {
+    animation: flicker 1.5s infinite alternate 0.5s;
+}
+
+.a2 {
+    animation: flicker 1.5s infinite alternate;
+}
+
+.a3 {
+    animation: flicker 1.5s infinite alternate 0.9s;
+}
